@@ -1,0 +1,58 @@
+extends common/_layout.pug
+
+block content
+
+    section
+        div.content
+            div.side
+                include elements/_consumer_menu.pug
+                div.banner
+            div.page
+                div.breadcrumbs
+                    a(href="index.html") Главная
+                    span О компании
+                h1 О компании
+                p Являясь представителем одного из лидеров производства силовых полупроводниковых приборов - готовы обеспечить компании любой величины поставками современной и надежной продукции.
+                p Наши специалисты готовы оказать оперативную техническую и информационную поддержку касательно поставляемого оборудования
+                p Опыт нашей команды позволяет решать Ваши нестандартные вопросы, такие как поиск редких или вышедших из производства продуктов, как отечественных так и импортных производителей, находя их или предлагая аналог.
+                strong Мы закроем Вашу &quot;головную боль&quot; в вопросах потребности электронных компонентов
+                div.advantages
+                    include elements/_advantages.pug
+                h2 Осуществляется доставку удобными для Вас транспортными компаниями:
+                p Являясь представителем одного из лидеров производства силовых полупроводниковых приборов - готовы обеспечить компании любой величины поставками современной и надежной продукции.
+                div.logos
+                    div.logo
+                        img(src="images/payment_6.webp")
+                    div.logo
+                        img(src="images/payment_2.webp")
+                    div.logo
+                        img(src="images/payment_3.webp")
+                    div.logo
+                        img(src="images/payment_4.webp")
+                    div.logo
+                        img(src="images/payment_5.webp")
+                    div.logo
+                        img(src="images/payment_7.webp")
+                h3 Реквизиты для оплаты:
+                div.requisites
+                    span Наименование
+                    strong ООО &quot;ТЕХНОПРОМ-М&quot;
+                    span ОГРН
+                    strong 1131324000280
+                    span ИНН
+                    strong 1324000813
+                    span КПП
+                    strong 132401001
+                    span Расчетный счет
+                    strong 40702810020140000106
+                    span Корпоративный счет
+                    strong 30101810900000000750
+                    span БИК
+                    strong 048952750
+                    span Название банка
+                    strong ОАО «Россельхозбанк»
+                    span Адрес
+                    strong 430005, РМ, г.Саранск, ул.Советская, 47 А
+
+    include sections/_contacts.pug
+    include sections/_map.pug

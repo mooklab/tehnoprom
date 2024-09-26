@@ -1,0 +1,13 @@
+doctype html
+html(lang="ru")
+    include _head.pug
+    body
+        include _header.pug
+        main
+            block content
+        include _footer.pug
+
+        include ../popups/_callback.pug
+        include ../popups/_menu.pug
+        include ../popups/_order.pug
+        include ../popups/_search.pug

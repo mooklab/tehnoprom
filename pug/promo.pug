@@ -1,0 +1,86 @@
+extends common/_layout.pug
+
+block content
+
+    section
+        div.content
+
+            div.side
+                include elements/_consumer_menu.pug
+                div.banner
+
+            section.promo
+
+                div.banner
+                    img(src="images/proton.svg", alt="")
+                    h1 проектирование и производство силовых полупроводниковых приборов
+                    span АО «Протон-Электротекс» — российский лидер проектирования и производства силовых полупроводниковых приборов, включая диоды, тиристоры и IGBT-модули, а также охладителей, силовых сборок и измерительного оборудования
+                    a(href="https://proton-electrotex.com/").button Перейти на сайт
+
+                div.years
+                    h2 История развития компании
+                    div.swiper.tabs_captions
+                        div.swiper-wrapper
+                            - for( x = 1; x <= 10; x++ )
+                                div.swiper-slide= 1995 + x
+
+                    div.swiper.tabs_contents
+                        div.swiper-wrapper
+                            - for( x = 1; x <= 10; x++ )
+                                div.swiper-slide
+                                    div.year
+                                        img(src="images/building.svg", alt="")
+                                        span= 1995 + x
+                                    div.description
+                                        p Год основания Протон-Электротекс. Предприятие было создано специалистами, которые имели большой опыт в области микроэлектроники. Первый самостоятельный проект – выпуск быстродействующих полупроводниковых приборов
+                        div.swiper-navigation
+                            div.arrow
+                                include ../images/swiper-arrow.svg
+                            div.arrow
+                                include ../images/swiper-arrow.svg
+
+                div.categories
+                    h2 Предприятие серийно производит следующие типы продукции
+                    div.list
+                        a(href="category.html", class="category_card")
+                            div.image
+                                img(src="images/category_1.webp")
+                            div.title IGBT модули
+                        a(href="category.html", class="category_card")
+                            div.image
+                                img(src="images/category_2.webp")
+                            div.title Тиристорные и диодные модули
+                        a(href="category.html", class="category_card")
+                            div.image
+                                img(src="images/category_3.webp")
+                            div.title Тиристоры
+                        a(href="category.html", class="category_card")
+                            div.image
+                                img(src="images/category_4.webp")
+                            div.title Диоды
+                        a(href="category.html", class="category_card")
+                            div.image
+                                img(src="images/category_5.webp")
+                            div.title Охладители
+                        a(href="category.html", class="category_card")
+                            div.image
+                                img(src="images/category_6.webp")
+                            div.title Силовые сборки
+                        a(href="category.html", class="category_card")
+                            div.image
+                                img(src="images/category_7.webp")
+                            div.title Драйверы
+                        a(href="category.html", class="category_card")
+                            div.image
+                                img(src="images/category_8.webp")
+                            div.title Измерительное оборудование
+                    a(href="category.html").button Перейти к каталогу
+
+                div.tehnoprom
+                    img(src="images/logotype_white.svg", alt="")
+                    h1 официальный представитель Протон-Электротекс
+                    span Компания ТЕХНОПРОМ-М основана более 10 лет назад, как оптовый поставщик электронных компонентов. С 2015 года являемся официальным представителем АО «Протон-Электротекс» – российского лидера проектирования и производства силовых полупроводниковых приборов.
+                
+
+    include sections/_contacts.pug
+    include sections/_map.pug

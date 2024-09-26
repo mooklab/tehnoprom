@@ -1,0 +1,69 @@
+extends common/_layout.pug
+
+block content
+
+    section
+        div.content
+            div.side
+                include elements/_consumer_menu.pug
+                div.banner
+            div.page
+                div.breadcrumbs
+                    a(href="index.html") Главная
+                    span Контактная информация
+                h1 Контактная информация
+                div.details
+                    p В соответствии с законом Ципфа, сегмент рынка обуславливает коллективный маркетинг. Позиционирование на рынке, следовательно, слабо изменяет культурный.
+                    div.grid
+                        span Телефон
+                        strong
+                            a(href="tel:+7 (499) 381-3023") +7 (499) 381-3023
+                        span E-mail
+                        strong
+                            a(href="mailto:tehnoprom-m@mail.ru") tehnoprom-m@mail.ru
+                        span Адрес
+                        strong 431441, Республика Мордовия, г. Рузаевка, ул. Тимирязева, 12 
+                            a(href="#map") показать на карте
+                br
+                br
+                h3 Реквизиты:
+                div.requisites
+                    span Наименование
+                    strong ООО &quot;ТЕХНОПРОМ-М&quot;
+                    span ОГРН
+                    strong 1131324000280
+                    span ИНН
+                    strong 1324000813
+                    span КПП
+                    strong 132401001
+                    span Расчетный счет
+                    strong 40702810020140000106
+                    span Корпоративный счет
+                    strong 30101810900000000750
+                    span БИК
+                    strong 048952750
+                    span Название банка
+                    strong ОАО «Россельхозбанк»
+                    span Адрес
+                    strong 430005, РМ, г.Саранск, ул.Советская, 47 А
+                br
+                br
+                h2 Есть вопросы? Напишите нам
+                p В соответствии с законом Ципфа, сегмент рынка обуславливает коллективный маркетинг. Позиционирование на рынке, следовательно, слабо изменяет культурный.
+                form.callback
+                    div.input.required
+                        label Название компании
+                        input(type="text", placeholder="Введите название компании", required)
+                    div.input.required
+                        label Телефон
+                        input(type="text", name="phone", placeholder="8 (___) ___-__-__", required)
+                    div.input.required
+                        label E-mail
+                        input(type="email", name="email", placeholder="Введите ваш E-mail", required)
+                    div.submit
+                        button(type="submit") Отправить
+                        span.policy Нажимая кнопку, я даю свое согласие на обработку моих персональных данных в соответствии с законом №152-ФЗ «О персональных данных» от 27.07.2006 и принимая условия 
+                            a(href="page.html", target="_blank") пользовательского соглашения
+
+    include sections/_contacts.pug
+    include sections/_map.pug

@@ -1,0 +1,92 @@
+extends common/_layout.pug
+
+block content
+
+    section
+        div.content
+            div.side
+                include elements/_consumer_menu.pug
+                div.banner
+            section.product
+                div.breadcrumbs
+                    a(href="index.html") Главная
+                    a(href="catalog.html") Каталог
+                    a(href="category.html") Тиристорные и диодные модули
+                div.about
+
+                    div.image
+                        img(src="images/category_2.webp", alt="")
+                    div.description
+                        h1 MIAA-HB12FA-200N
+                        div.price
+                            div.cost
+                                span Цена товара:
+                                strong 4 390 ₽
+                            div.quantity
+                                div.minus –
+                                input(type="number", name="count", value="1", min='1', max='1000')
+                                div.plus +
+                            button Заказать
+                        span IGBT модули в промышленном исполнении на средние частоты от производителя в России. В данном разделе Вы можете ознакомиться со списком IGBT модулей производства АО «Протон-Электротекс», их характеристиками, особенностями и преимуществами.
+                    
+                div.services
+                    div.service
+                        img(src="images/delivery.svg", alt="")
+                        strong Доставка:
+                        ul 
+                            li Курьером (бесплатно от 2 000 ₽)
+                            li Экспресс доставка (3 часа - 500 ₽)
+                            li Самовывоз
+                    div.service
+                        img(src="images/payment.svg", alt="")
+                        strong Оплата:
+                        ul 
+                            li Наличными при получении товара
+                            li Банковский перевод (с НДС)
+                            li Online (Visa, Mastercard)
+                    div.service
+                        img(src="images/return.svg", alt="")
+                        strong Возврат / гарантия:
+                        ul 
+                            li Обмен и возврат товара в течении 14 дней
+                            li Гарантия 12 месяцев
+
+                div.reviews
+                    h2 2 Отзыва НА «MIAA-HB12FA-200N»
+                    include wordpress/_comments.pug
+
+                div.add_review
+                    div.accordion
+                        div.accordion_caption
+                            div.show
+                                img(src="images/add_review.svg", alt="")
+                                span Добавить отзыв
+                            div.hide
+                                img(src="images/hide_form.svg", alt="")
+                                span Скрыть форму
+                        div.accordion_content
+                            div.wrap
+                                div.form
+                                    include wordpress/_comment_form.pug
+
+                div.similar
+                    h2 Похожие товары:
+                    table(cellspacing="0", cellpadding="0", width="100%")
+                        thead
+                            tr
+                                td.title Наименование прибора
+                                td.price Цена товара
+                                td.buy
+                        tbody
+                            - for( x = 1; x <= 10; x++ )
+                                tr
+                                    td.title
+                                        a(href="product.html"): strong Тиристор T175-3
+                                    td.price
+                                        strong 8 990 Р
+                                    td.buy
+                                        a(target-modal="order", data-title="Тиристор T175-31", data-image="images/category.webp") купить в 1 клик
+
+
+    include sections/_contacts.pug
+    include sections/_map.pug

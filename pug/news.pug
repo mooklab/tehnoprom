@@ -1,0 +1,27 @@
+extends common/_layout.pug
+
+block content
+
+    section
+        div.content
+            div.side
+                include elements/_consumer_menu.pug
+                div.banner
+            div.page
+                div.breadcrumbs
+                    a(href="index.html") Главная
+                    span Новости
+                h1 Новости
+                div.news
+                    - for( x = 1; x <= 10; x++ )
+                        a(href="article.html", class="news_card")
+                            div.image
+                                img(src!="images/news_" + x + ".webp")
+                            div.description
+                                div.date 24 Августа 2022
+                                h4 Тренинг сотрудников &quot;Протон-Электротекс&quot;
+                                p 19 августа технические инженеры компании  «Протон-Электротекс» приняли участие в тренинге на тему личностного роста.
+                include elements/_more.pug
+
+    include sections/_contacts.pug
+    include sections/_map.pug

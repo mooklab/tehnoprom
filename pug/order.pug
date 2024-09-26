@@ -1,0 +1,41 @@
+extends common/_layout.pug
+
+block content
+
+    section.order
+        div.content
+            div.breadcrumbs
+                a(href="index.html") Главная
+                span Запрос на подбор отечественного аналога для иностранного прибора
+
+            h1 Запрос на подбор отечественного аналога для иностранного прибора
+
+            form
+                div.input.required
+                    label Название вашей компании
+                    input(type="text", placeholder="Название вашей компании", required)
+                div.input
+                    label Компания изготовитель
+                    input(type="text", placeholder="Компания изготовитель")
+                div.input.required
+                    label Маркировка прибора
+                    input(type="text", placeholder="Маркировка прибора", required)
+                div.input
+                    label Количество
+                    div.quantity
+                        div.minus –
+                        input(type="number", name="count", value="1", min='1', max='1000')
+                        div.plus +
+                div.input.required
+                    label Имя
+                    input(type="text", placeholder="Имя", required)
+                div.input.required
+                    label E-mail
+                    input(type="email", placeholder="E-mail", required)
+                div.input.required
+                    label Телефон
+                    input(type="text", name="phone", placeholder="8 (___) ___-__-__", required)
+                button Отправить
+
+    include sections/_contacts.pug
+    include sections/_map.pug

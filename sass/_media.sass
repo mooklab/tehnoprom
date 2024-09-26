@@ -1,0 +1,147 @@
+
+@media (max-width: 1660px)
+    section.banner
+        .arrows
+            top: unset
+            bottom: var(--small-gap)
+            margin-bottom: -4px
+            svg
+                width: 24px
+                height: 24px
+            //transform: translateY(50%)
+
+
+@media (max-width: 1280px)
+    section.banner
+        .description
+            h1
+                font-size: 3rem
+                line-height: 1.2em
+    section.categories
+        .content
+            grid-template-columns: repeat(3, 1fr)
+    section.categories_full
+        .content
+            grid-template-columns: 1fr 1fr
+    section:not([class])
+        .page
+            .intro
+                grid-template-columns: 2fr 1fr
+
+@media (max-width: 960px)
+    header
+        .search
+            svg
+                width: 24px
+                height: 24px
+        .button
+            display: none
+    section.banner
+        .description
+            h1
+                font-size: 2.5rem
+                line-height: 1.2em
+    section.advantages
+        .content
+            display: grid
+            grid-template-columns: repeat(2, 1fr)
+    section.categories
+        .content
+            grid-template-columns: repeat(2, 1fr)
+    section.contacts
+        .content
+            grid-template-columns: 1fr
+
+    section:not([class])
+        .content
+            grid-template-columns: 1fr
+        .side
+            display: none
+        &::before
+            display: none
+
+@media (max-width: 640px)
+    header
+        .search
+            display: none
+    section.banner
+        .banner
+            grid-template-columns: 1fr
+            .image
+                order: 1
+                max-width: 320px
+                margin: var(--big-gap) auto 0
+            .description
+                order: 2
+                text-align: center
+                margin-bottom: var(--section-gap)
+                h1
+                    font-size: 1.7rem
+    section.advantages
+        .content
+            display: grid
+            grid-template-columns: 1fr
+    
+    section.contacts
+        .form
+            form
+                grid-template-columns: 1fr
+                & > *:first-child
+                    grid-column: unset
+                .submit
+                    grid-column: unset
+                    grid-template-columns: 1fr
+    section.categories
+        .content
+            grid-template-columns: 1fr
+    section.categories_full
+        .content
+            grid-template-columns: 1fr
+    section:not([class])
+        .page
+            .intro
+                justify-items: center
+                grid-template-columns: 1fr
+                grid-gap: var(--medium-gap)
+                .image
+                    order: 1
+                    max-width: 280px
+                    width: 100%
+                    margin: var(--medium-gap) 0
+                .description
+                    order: 2
+            .advantages
+                grid-template-columns: 1fr
+            .logos
+                grid-template-columns: repeat( auto-fit, minmax(120px, 1fr) )
+            .requisites
+                grid-template-columns: 1fr
+                grid-gap: 0
+                strong
+                    padding-bottom: .5rem
+            form.callback
+                grid-template-columns: 1fr
+                & > *:first-child
+                    grid-column: unset
+                .submit
+                    grid-column: unset
+                    grid-template-columns: 1fr
+            table
+                thead
+                    display: none
+                tbody
+                    tr
+                        border-bottom: 1px solid $border-color
+                        display: grid
+                        grid-template-areas: "A A" "B C"
+                        padding: .5rem 0
+                    td
+                        padding: unset
+                    tr:not(:last-child) td
+                        border-bottom: unset
+                    .title
+                        grid-area: A
+                    .price
+                        grid-area: B
+                    .buy
+                        grid-area: C

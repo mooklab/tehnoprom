@@ -1,0 +1,68 @@
+extends common/_layout.pug
+
+block content
+
+    section.page
+        div.content
+            div.breadcrumbs
+                a(href="index.html") Главная
+                span Каталог
+            h1 Каталог продукции
+
+    section(class="categories_full")
+        div.content
+            div(class="category_card_full")
+                div.image
+                    img(src="images/category_1.webp")
+                div.links
+                    a(href="category.html") IGBT модули
+            div(class="category_card_full")
+                div.image
+                    img(src="images/category_2.webp")
+                div.links
+                    a(href="category.html") Тиристорные и диодные модули
+                    a(href="category.html") Однопозиционные
+                    a(href="category.html") Двухпозиционные
+            div(class="category_card_full")
+                div.image
+                    img(src="images/category_3.webp")
+                div.links
+                    a(href="category.html") Тиристоры
+                    a(href="category.html") В таблеточном исполнении
+                    a(href="category.html") В штыревом исполнении
+            div(class="category_card_full")
+                div.image
+                    img(src="images/category_4.webp")
+                div.links
+                    a(href="category.html") Диоды
+                    a(href="category.html") В таблеточном исполнении
+                    a(href="category.html") В штыревом исполнении
+            div(class="category_card_full")
+                div.image
+                    img(src="images/category_5.webp")
+                div.links
+                    a(href="category.html") Охладители
+            div(class="category_card_full")
+                div.image
+                    img(src="images/category_6.webp")
+                div.links
+                    a(href="category.html") Силовые сборки
+            div(class="category_card_full")
+                div.image
+                    img(src="images/category_7.webp")
+                div.links
+                    a(href="category.html") Драйверы
+                    a(href="category.html") IGBT драйверы
+                    a(href="category.html") Тиристорные драйверы
+            div(class="category_card_full")
+                div.image
+                    img(src="images/category_8.webp")
+                div.links
+                    a(href="category.html") Измерительное оборудование
+    
+    section.seo
+        div.content
+            p Наши специалисты готовы оказать оперативную техническую и информационную поддержку касательно поставляемого оборудования. Опыт нашей команды позволяет решать Ваши нестандартные вопросы, такие как поиск редких или вышедших из производства продуктов, как отечественных так и импортных производителей, находя их или предлагая аналог
+
+    include sections/_contacts.pug
+    include sections/_map.pug

@@ -1,0 +1,73 @@
+extends common/_layout.pug
+
+block content
+
+    section.banner
+        div.content
+            div.list
+                //- - for( x = 1; x <= 5; x++ )
+                div.banner
+                    div.description
+                        h1 Официальный представитель Протон-Электротекс
+                        p Являемся представителем одного из лидеров производства силовых полупроводниковых приборов
+                        a.button(href="about.html") Подробнее
+                    div.image
+                        img(src="images/banner.webp")
+        //- div.arrows
+        //-     div.left_arrow
+        //-         include ../images/arrow.svg
+        //-     div.right_arrow
+        //-         include ../images/arrow.svg
+        //- div.dots
+
+    section.advantages
+        div.content
+            include elements/_advantages.pug
+
+    section.categories
+        div.content
+            a(href="category.html", class="category_card")
+                div.image
+                    img(src="images/category_1.webp")
+                div.title IGBT модули
+            a(href="category.html", class="category_card")
+                div.image
+                    img(src="images/category_2.webp")
+                div.title Тиристорные и диодные модули
+            a(href="category.html", class="category_card")
+                div.image
+                    img(src="images/category_3.webp")
+                div.title Тиристоры
+            a(href="category.html", class="category_card")
+                div.image
+                    img(src="images/category_4.webp")
+                div.title Диоды
+            a(href="category.html", class="category_card")
+                div.image
+                    img(src="images/category_5.webp")
+                div.title Охладители
+            a(href="category.html", class="category_card")
+                div.image
+                    img(src="images/category_6.webp")
+                div.title Силовые сборки
+            a(href="category.html", class="category_card")
+                div.image
+                    img(src="images/category_7.webp")
+                div.title Драйверы
+            a(href="category.html", class="category_card")
+                div.image
+                    img(src="images/category_8.webp")
+                div.title Измерительное оборудование
+
+    section.about
+        div.content
+            i О компании
+            h3 Являемся представителем одного из лидеров производства силовых полупроводниковых приборов - АО «Протон-Электротекс». #[br]Готовы обеспечить компании любой величины поставками современной и надежной продукции.
+            p Наши специалисты готовы оказать оперативную техническую и информационную поддержку касательно поставляемого оборудования. Опыт нашей команды позволяет решать Ваши нестандартные вопросы, такие как поиск редких или вышедших из производства продуктов, как отечественных так и импортных производителей, находя их или предлагая аналог
+            a.link(href="images/certificate.webp", target="_blank")
+                div.icon
+                    include ../images/external_link.svg
+                span Посмотреть сертификат
+
+    include sections/_contacts.pug
+    include sections/_map.pug

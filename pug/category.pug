@@ -1,0 +1,45 @@
+extends common/_layout.pug
+
+block content
+
+    section
+        div.content
+            div.side
+                include elements/_catalog_menu.pug
+                div.banner
+            div.page
+                div.breadcrumbs
+                    a(href="index.html") Главная
+                    a(href="catalog.html") Каталог
+                    a(href="category.html") Тиристорные и диодные модули
+                    span Однопозиционные
+                div.intro
+                    div.description
+                        h1 Однопозиционные Тиристорные и диодные модули
+                        p Наши специалисты готовы оказать оперативную техническую и информационную поддержку касательно поставляемого оборудования. Опыт нашей команды позволяет решать Ваши нестандартные вопросы, такие как поиск редких или вышедших из производства продуктов, как отечественных так и импортных производителей, находя их или предлагая аналог
+                    div.image
+                        img(src="images/category.webp")
+                form.search
+                    input(type="text", placeholder="Поиск товаров по разделу")
+                    button
+                        include ../images/search.svg
+                table(cellspacing="0", cellpadding="0", width="100%")
+                    thead
+                        tr
+                            td.title Наименование прибора
+                            td.price Цена товара
+                            td.buy
+                    tbody
+                        - for( x = 1; x <= 20; x++ )
+                            tr
+                                td.title
+                                    strong: a(href="product.html") Тиристор T175-3 
+                                td.price
+                                    strong 8 990 Р
+                                td.buy
+                                    a(target-modal="order", data-title="Тиристор T175-31", data-image="images/category.webp") купить в 1 клик
+                include elements/_more.pug
+                p Наши специалисты готовы оказать оперативную техническую и информационную поддержку касательно поставляемого оборудования. Опыт нашей команды позволяет решать Ваши нестандартные вопросы, такие как поиск редких или вышедших из производства продуктов, как отечественных так и импортных производителей, находя их или предлагая аналог
+
+    include sections/_contacts.pug
+    include sections/_map.pug
