@@ -1,0 +1,25 @@
+section.form
+    div.content
+        div.text
+            h2 Есть запрос? Напишите нам
+            //- p В соответствии с законом Ципфа, сегмент рынка обуславливает коллективный маркетинг. Позиционирование на рынке, следовательно, слабо изменяет культурный.
+        form
+            div.input.required
+                label Название компании
+                input(type="text", placeholder="Введите название компании", required)
+            div.input.required
+                label Телефон
+                input(type="text", name="phone", placeholder="8 (___) ___-__-__", required)
+            div.input.required
+                label E-mail
+                input(type="email", name="email", placeholder="Введите ваш E-mail", required)
+            div.input
+                label Артикул
+                input(type="text", name="phone", placeholder="Артикул")
+            div.input
+                label Количество
+                input(type="email", name="email", placeholder="Количество")
+            div.submit
+                button(type="submit") Отправить
+                span.policy Нажимая кнопку, я даю свое согласие на обработку моих персональных данных в соответствии с законом №152-ФЗ «О персональных данных» от 27.07.2006 и принимая условия 
+                    a(href="page.html", target="_blank") пользовательского соглашения

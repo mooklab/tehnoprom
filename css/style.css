@@ -1134,6 +1134,20 @@ section.contacts .content {
   grid-template-columns: repeat(2, 1fr);
   grid-gap: var(--medium-gap);
 }
+section.contacts .requisites {
+  display: grid;
+  -ms-flex-line-pack: start;
+      align-content: start;
+  grid-gap: 30px;
+}
+section.contacts .requisites div.list {
+  background: -webkit-gradient(linear, left top, right top, from(#F4F6FB), to(#EEF1F9));
+  background: linear-gradient(90deg, #F4F6FB 0%, #EEF1F9 100%);
+  display: grid;
+  grid-template-columns: -webkit-max-content 1fr;
+  grid-template-columns: max-content 1fr;
+  grid-gap: 15px;
+}
 section.contacts .details {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1142,7 +1156,7 @@ section.contacts .details {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 1rem;
+  gap: 30px;
 }
 section.contacts .details .grid {
   display: grid;
@@ -1150,7 +1164,6 @@ section.contacts .details .grid {
   grid-template-columns: max-content 1fr;
   grid-column-gap: var(--medium-gap);
   grid-row-gap: 1.5rem;
-  margin-top: var(--small-gap);
 }
 section.contacts .details strong {
   font-size: 1.125rem;
@@ -1201,6 +1214,50 @@ section.contacts .form form .submit p {
   font-size: 0.9rem;
 }
 section.contacts .form form .submit p a:hover {
+  text-decoration: underline;
+}
+
+section.form {
+  background: -webkit-gradient(linear, left top, right top, from(#F4F6FB), to(#EEF1F9));
+  background: linear-gradient(90deg, #F4F6FB 0%, #EEF1F9 100%);
+  padding-top: var(--section-gap);
+  padding-bottom: var(--section-gap);
+}
+section.form div.content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 60px;
+}
+section.form div.text {
+  display: grid;
+  -ms-flex-line-pack: start;
+      align-content: start;
+  grid-gap: 20px;
+  max-width: 360px;
+}
+section.form form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: var(--small-gap);
+  margin-top: 1rem;
+}
+section.form form > *:first-child {
+  grid-column: 1/3;
+}
+section.form form .submit {
+  grid-column: 1/4;
+  display: grid;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  grid-template-columns: -webkit-max-content 1fr;
+  grid-template-columns: max-content 1fr;
+  grid-gap: var(--small-gap);
+}
+section.form form .submit p {
+  font-size: 0.9rem;
+}
+section.form form .submit p a:hover {
   text-decoration: underline;
 }
 
@@ -1342,11 +1399,9 @@ section:not([class]) .page {
 section:not([class]) .page .breadcrumbs {
   margin-bottom: var(--small-gap);
 }
-section:not([class]) .page h1, section:not([class]) .page h2, section:not([class]) .page h3, section:not([class]) .page h4 {
-  margin-bottom: 0.5em;
-}
 section:not([class]) .page h1:not(:first-child), section:not([class]) .page h2:not(:first-child), section:not([class]) .page h3:not(:first-child), section:not([class]) .page h4:not(:first-child) {
   margin-top: 0.5em;
+  margin-bottom: 0.5em;
 }
 section:not([class]) .page p {
   margin-bottom: 1em;

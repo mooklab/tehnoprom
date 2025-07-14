@@ -20,6 +20,8 @@ block content
         //-         include ../images/arrow.svg
         //- div.dots
 
+    include sections/_form.pug
+
     section.advantages
         div.content
             include elements/_advantages.pug
@@ -58,6 +60,14 @@ block content
                 div.image
                     img(src="images/category_8.webp")
                 div.title Измерительное оборудование
+            a(href="category.html", class="category_card")
+                div.image
+                    img(src="images/category_11.webp")
+                div.title Компьютеры  и оргтехника
+            a(href="category.html", class="category_card")
+                div.image
+                    img(src="images/category_10.webp")
+                div.title Подбор отечественного аналога
 
     section.about
         div.content
